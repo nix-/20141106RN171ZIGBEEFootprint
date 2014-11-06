@@ -4575,6 +4575,7 @@ Source: www.kingbright.com</description>
 <part name="LED8" library="eagle-ltspice" deviceset="LED_E" device="LD260"/>
 <part name="GND4" library="supply1" deviceset="GND" device=""/>
 <part name="P+3" library="supply1" deviceset="VCC" device=""/>
+<part name="P+4" library="supply1" deviceset="VCC" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -4609,6 +4610,7 @@ Source: www.kingbright.com</description>
 <instance part="LED8" gate="G$1" x="238.76" y="59.69"/>
 <instance part="GND4" gate="1" x="238.76" y="48.26"/>
 <instance part="P+3" gate="VCC" x="115.57" y="68.58"/>
+<instance part="P+4" gate="VCC" x="95.25" y="140.97"/>
 </instances>
 <busses>
 </busses>
@@ -4775,6 +4777,12 @@ Source: www.kingbright.com</description>
 <pinref part="P+1" gate="VCC" pin="VCC"/>
 <wire x1="33.02" y1="110.49" x2="31.75" y2="110.49" width="0.1524" layer="91"/>
 <wire x1="31.75" y1="110.49" x2="31.75" y2="116.84" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="P+4" gate="VCC" pin="VCC"/>
+<wire x1="95.25" y1="138.43" x2="95.25" y2="109.22" width="0.1524" layer="91"/>
+<pinref part="J1" gate="G$1" pin="VDD_3.3V_RF"/>
+<wire x1="95.25" y1="109.22" x2="97.79" y2="109.22" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$1" class="0">

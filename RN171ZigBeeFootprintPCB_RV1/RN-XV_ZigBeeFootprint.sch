@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.1">
+<eagle version="6.6.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -992,6 +992,8 @@ Source: http://ecommas.tycoelectronics.com .. ENG_CD_640456_W.pdf</description>
 <part name="P+2" library="supply1" deviceset="VCC" device=""/>
 <part name="J2" library="con-amp" deviceset="MTA08-100" device=""/>
 <part name="J3" library="con-amp" deviceset="MTA08-100" device=""/>
+<part name="P+3" library="supply1" deviceset="VCC" device=""/>
+<part name="P+4" library="supply1" deviceset="VCC" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -1008,6 +1010,8 @@ Source: http://ecommas.tycoelectronics.com .. ENG_CD_640456_W.pdf</description>
 <instance part="P+2" gate="VCC" x="196.85" y="111.76"/>
 <instance part="J2" gate="G$1" x="107.95" y="125.73" rot="MR270"/>
 <instance part="J3" gate="G$1" x="210.82" y="95.25" rot="R270"/>
+<instance part="P+3" gate="VCC" x="143.51" y="62.23"/>
+<instance part="P+4" gate="VCC" x="125.73" y="138.43"/>
 </instances>
 <busses>
 </busses>
@@ -1123,20 +1127,31 @@ Source: http://ecommas.tycoelectronics.com .. ENG_CD_640456_W.pdf</description>
 <label x="194.31" y="74.93" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="VCC" class="0">
-<segment>
-<pinref part="XB1" gate="G$1" pin="VCC"/>
-<pinref part="P+1" gate="VCC" pin="VCC"/>
-<wire x1="63.5" y1="106.68" x2="62.23" y2="106.68" width="0.1524" layer="91"/>
-<wire x1="62.23" y1="106.68" x2="62.23" y2="113.03" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="VDD_3.3V" class="0">
 <segment>
 <pinref part="P+2" gate="VCC" pin="VCC"/>
 <wire x1="196.85" y1="109.22" x2="196.85" y2="95.25" width="0.1524" layer="91"/>
 <wire x1="196.85" y1="95.25" x2="186.69" y2="95.25" width="0.1524" layer="91"/>
 <pinref part="J1" gate="G$1" pin="VDD_3.3V"/>
+</segment>
+<segment>
+<pinref part="J1" gate="G$1" pin="VDD_BATT"/>
+<wire x1="161.29" y1="64.77" x2="161.29" y2="57.15" width="0.1524" layer="91"/>
+<pinref part="P+3" gate="VCC" pin="VCC"/>
+<wire x1="161.29" y1="57.15" x2="143.51" y2="57.15" width="0.1524" layer="91"/>
+<wire x1="143.51" y1="57.15" x2="143.51" y2="59.69" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="XB1" gate="G$1" pin="VCC"/>
+<pinref part="P+1" gate="VCC" pin="VCC"/>
+<wire x1="63.5" y1="106.68" x2="62.23" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="62.23" y1="106.68" x2="62.23" y2="113.03" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="J1" gate="G$1" pin="VDD_3.3V_RF"/>
+<pinref part="P+4" gate="VCC" pin="VCC"/>
+<wire x1="128.27" y1="105.41" x2="125.73" y2="105.41" width="0.1524" layer="91"/>
+<wire x1="125.73" y1="105.41" x2="125.73" y2="135.89" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$1" class="0">
