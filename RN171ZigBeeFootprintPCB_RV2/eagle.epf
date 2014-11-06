@@ -7,7 +7,7 @@ Desktop="Desktop"
 
 [Globals]
 AutoSaveProject=1
-UsedLibrary="C:/#Projects/20140905BridgeSensorLinearityDeviationAnalyzer/AquisitionModule/PCB/Libraries/ADS1231.lbr"
+UsedLibrary=""
 
 [Win_1]
 Type="Board Editor"
